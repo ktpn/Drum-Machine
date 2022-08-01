@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Drum Machine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+  <body>
+    <script>
+
+        function play(str) {
+
+            if (str === "q" || str === "Q") {
+                document.getElementById('display').innerHTML = "Pressed/play Q key";
+            } else if (str === "w" || str === "W") {
+                document.getElementById('display').innerHTML = "Pressed/play W key";
+            } else if (str === "e" || str === "E") {
+                document.getElementById('display').innerHTML = "Pressed/play E key";
+            } else if (str === "a" || str === "A") {
+                document.getElementById('display').innerHTML = "Pressed/play A key";
+            } else if (str === "s" || str === "S") {
+                document.getElementById('display').innerHTML = "Pressed/play S key";
+            } else if (str === "d" || str === "D") {
+                document.getElementById('display').innerHTML = "Pressed/play D key";
+            } else if (str === "z" || str === "Z") {
+                document.getElementById('display').innerHTML = "Pressed/play Z key";
+            } else if (str === "x" || str === "X") {
+                document.getElementById('display').innerHTML = "Pressed/play X key";
+            } else if (str === "c" || str === "C") {
+                document.getElementById('display').innerHTML = "Pressed/play C key";
+            }
+
+            let audio = document.getElementById(str);
+            audio.play();
+        }
+
+        window.document.onkeyup = function(event) {
+            let str = event.key;
+            if (str === "q" || str === "Q") {
+                play("Q");
+            } else if (str === "w" || str === "W") {
+                play("W");
+            } else if (str === "e" || str === "E") {
+                play("E");
+            } else if (str === "a" || str === "A") {
+                play("A");
+            } else if (str === "s" || str === "S") {
+                play("S");
+            } else if (str === "d" || str === "D") {
+                play("D");
+            } else if (str === "z" || str === "Z") {
+                play("Z");
+            } else if (str === "x" || str === "X") {
+                play("X");
+            } else if (str === "c" || str === "C") {
+                play("C");
+            }
+        }
+    </script>
+
+    <div class="container text-center" id="drum-machine">
+        <h1 class="text-center my-3">Simple Drum Machine</h1>
+        <p class="text-center py-3">Click or press the key to play sounds</p>
+        <div class="card my-3">
+            <div class="card-body">
+            <div id="display" class="text-center">Display key played here</div>
+            </div>
+        </div>
+            
+            <button class="drum-pad btn btn-block btn-primary" id="drum-0" onClick="play('Q')">Q
+                <audio src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-77317/zapsplat_musical_percussive_triangle_single_hit_002_77567.mp3"
+                class="clip" id="Q">
+            </button>
+            <button class="drum-pad btn btn-block btn-primary" id="drum-1" onClick="play('W')">W
+                <audio src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-61905/zapsplat_musical_drum_percussion_metal_gong_like_soft_hit_002_67471.mp3"
+                class="clip" id="W">
+
+            </button>
+            <button class="drum-pad btn btn-block btn-primary" id="drum-2" onClick="play('E')">E
+                <audio src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-55112/zapsplat_musical_perscussion_tambourine_kids_set_down_61898.mp3" 
+                class="clip" id="E">
+
+            </button>
+            <button class="drum-pad btn btn-block btn-primary" id="drum-3" onClick="play('A')">A
+                <audio src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-55112/zapsplat_musical_perscussion_shaker_maracas_kids_single_shake_003_61894.mp3" 
+                class="clip" id="A">
+
+            </button>
+            <button class="drum-pad btn btn-block btn-primary" id="drum-4" onClick="play('S')">S
+                <audio src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-55112/zapsplat_musical_drum_tom_hit_strike_single_mid_low_001_58459.mp3" 
+                class="clip" id="S">
+
+            </button>
+            <button class="drum-pad btn btn-block btn-primary" id="drum-5" onClick="play('D')">D
+                <audio src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-55112/zapsplat_ical_drum_tom_hit_strike_single_high_pitched_001_58401.mp3" 
+                class="clip" id="D">
+
+            </button>
+            <button class="drum-pad btn btn-block btn-primary" id="drum-6" onClick="play('Z')">Z
+                <audio src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-55112/zapsplat_ical_drum_bongo_fast_tribal_riff_001_58399.mp3" 
+                class="clip" id="Z">
+
+            </button>
+            <button class="drum-pad btn btn-block btn-primary" id="drum-7" onClick="play('X')">X
+                <audio src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-46416/zapsplat_musical_drum_tom_set_down_007_54849.mp3" 
+                class="clip" id="X">
+
+            </button>
+            <button class="drum-pad btn btn-block btn-primary" id="drum-8" onClick="play('C')">C
+                <audio src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-46416/zapsplat_musical_drum_tom_plastic_hard_hit_single_strike_54840.mp3" 
+                class="clip" id="C">
+
+            </button>
+
+    </div>
+
+
+
+    <br>
+    
+    <h5 
+    style="text-align: center" >By: <a href="https://github.com/ktpn"
+    onmouseover="this.style.color= 'white', this.style.backgroundColor= 'gray';"
+    onmouseout="this.style.color= '', this.style.backgroundColor= '';"
+    >_ktpn_</a></h5>
+
+
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>
